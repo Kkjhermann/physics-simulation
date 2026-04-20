@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/PhysicsSimulationEngine/">
+    <file alias="Main.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/Main.qml</file>
+    <file alias="ressource.qrc">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/ressource.qrc</file>
+  </qresource>
+</RCC>
+
