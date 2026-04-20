@@ -1,6 +1,10 @@
 <RCC>
   <qresource prefix="/qt/qml/PhysicsSimulationEngine/">
     <file alias="Main.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/Main.qml</file>
+    <file alias="UI/TopMenu.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/TopMenu.qml</file>
+    <file alias="UI/MechanicsView.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/MechanicsView.qml</file>
+    <file alias="UI/WaveView.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/WaveView.qml</file>
+    <file alias="UI/ThermoView.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/ThermoView.qml</file>
     <file alias="ressource.qrc">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/ressource.qrc</file>
   </qresource>
 </RCC>

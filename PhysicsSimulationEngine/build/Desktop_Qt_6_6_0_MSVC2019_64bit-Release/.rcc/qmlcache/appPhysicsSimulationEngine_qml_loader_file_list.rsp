@@ -1,1 +1,5 @@
 /qt/qml/PhysicsSimulationEngine/Main.qml
+/qt/qml/PhysicsSimulationEngine/UI/TopMenu.qml
+/qt/qml/PhysicsSimulationEngine/UI/MechanicsView.qml
+/qt/qml/PhysicsSimulationEngine/UI/WaveView.qml
+/qt/qml/PhysicsSimulationEngine/UI/ThermoView.qml

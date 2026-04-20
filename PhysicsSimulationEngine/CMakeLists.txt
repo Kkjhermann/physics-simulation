@@ -18,6 +18,10 @@ qt_add_qml_module(appPhysicsSimulationEngine
     QML_FILES
         Main.qml
         RESOURCES ressource.qrc
+        QML_FILES UI/TopMenu.qml
+        QML_FILES UI/MechanicsView.qml
+        QML_FILES UI/WaveView.qml
+        QML_FILES UI/ThermoView.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

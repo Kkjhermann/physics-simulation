@@ -1,5 +1,7 @@
-import QtQuick
-import QtQuick.Controls
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Window 2.15
+import "UI"
 
 Window {
     width: 1200
@@ -9,26 +11,44 @@ Window {
 
     property int currentMode: 0
 
+    function viewForMode(mode) {
+        if (mode === 0)
+            return mechanics
+        else if (mode === 1)
+            return waves
+        else
+            return thermo
+    }
+
     Column {
         anchors.fill: parent
+        spacing: 0
 
-        Menu {
-            id: menu
-            onModeSelected: function(mode) {
-                currentMode = mode
-            }
+        TopMenu {
+            id: topMenu
+            onModeSelected: currentMode = mode
         }
 
         Loader {
             id: loader
-            anchors.fill: parent
-            sourceComponent: currentMode === 0 ? mechanics :
-                             currentMode === 1 ? waves :
-                             thermo
+            width: parent.width
+            height: parent.height - topMenu.height
+            sourceComponent: viewForMode(currentMode)
         }
     }
 
-    Component { id: mechanics; MechanicsView {} }
-    Component { id: waves; WaveView {} }
-    Component { id: thermo; ThermoView {} }
+    Component {
+        id: mechanics
+        MechanicsView { }
+    }
+
+    Component {
+        id: waves
+        WaveView { }
+    }
+
+    Component {
+        id: thermo
+        ThermoView { }
+    }
 }
