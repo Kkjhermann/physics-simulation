@@ -40,6 +40,48 @@ namespace _qt_qml_PhysicsSimulationEngine_UI_ThermoView_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_PhysicsSimulationEngine_UI_Cinematic_view_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_PhysicsSimulationEngine_UI_VectorArrow_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_PhysicsSimulationEngine_UI_PhysicsObject_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_PhysicsSimulationEngine_UI_InclinedPlane_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_PhysicsSimulationEngine_UI_Spring_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_PhysicsSimulationEngine_UI_Rope_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -59,6 +101,12 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/MechanicsView.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_MechanicsView_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/WaveView.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_WaveView_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/ThermoView.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_ThermoView_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/Cinematic_view.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_Cinematic_view_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/VectorArrow.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_VectorArrow_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/PhysicsObject.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_PhysicsObject_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/InclinedPlane.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_InclinedPlane_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/Spring.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_Spring_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/Rope.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_Rope_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

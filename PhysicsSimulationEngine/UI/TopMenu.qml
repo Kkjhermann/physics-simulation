@@ -15,5 +15,6 @@ Rectangle {
         Button { text: "Mécanique"; onClicked: modeSelected(0) }
         Button { text: "Ondes"; onClicked: modeSelected(1) }
         Button { text: "Thermo"; onClicked: modeSelected(2) }
+        Button { text: "kinematics"; onClicked: modeSelected(3) }
     }
 }

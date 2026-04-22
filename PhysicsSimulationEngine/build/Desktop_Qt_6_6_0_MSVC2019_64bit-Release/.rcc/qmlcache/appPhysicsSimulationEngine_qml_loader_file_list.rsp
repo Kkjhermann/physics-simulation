@@ -3,3 +3,10 @@
 /qt/qml/PhysicsSimulationEngine/UI/MechanicsView.qml
 /qt/qml/PhysicsSimulationEngine/UI/WaveView.qml
 /qt/qml/PhysicsSimulationEngine/UI/ThermoView.qml
+/qt/qml/PhysicsSimulationEngine/UI/Cinematic_view.qml
+/qt/qml/PhysicsSimulationEngine/UI/VectorArrow.qml
+/qt/qml/PhysicsSimulationEngine/UI/PhysicsObject.qml
+/qt/qml/PhysicsSimulationEngine/UI/InclinedPlane.qml
+/qt/qml/PhysicsSimulationEngine/UI/Spring.qml
+/qt/qml/PhysicsSimulationEngine/UI/Rope.qml
+/qt/qml/PhysicsSimulationEngine/UI/Pulley.qml

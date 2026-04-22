@@ -16,8 +16,10 @@ Window {
             return mechanics
         else if (mode === 1)
             return waves
-        else
+        else if (mode === 2)
             return thermo
+        else
+            return kinematics
     }
 
     Column {
@@ -50,5 +52,9 @@ Window {
     Component {
         id: thermo
         ThermoView { }
+    }
+    Component {
+        id: kinematics
+        Cinematic_view { }
     }
 }

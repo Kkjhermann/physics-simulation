@@ -1118,7 +1118,15 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/appPhysicsSimulationEngine_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "appPhysicsSimulationEngine_autogen/timestamp",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/Simulation/simulation.h",
+			"MU",
+			"3O5AHE22JO/moc_simulation.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/appPhysicsSimulationEngine_autogen/include",
 	"MOC_COMPILATION_FILE" : "C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/appPhysicsSimulationEngine_autogen/mocs_compilation.cpp",
@@ -1181,9 +1189,16 @@
 	"MOC_SKIP" : 
 	[
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_Main_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/Cinematic_view_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/InclinedPlane_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/MechanicsView_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/PhysicsObject_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/Pulley_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/Rope_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/Spring_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/ThermoView_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/TopMenu_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/VectorArrow_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/WaveView_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qrc_appPhysicsSimulationEngine_raw_qml_0.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qrc_qmake_PhysicsSimulationEngine.cpp",
@@ -1200,6 +1215,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/Simulation/simulation.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_qmlcache_loader.cpp",
 			"MU",
 			null
@@ -1215,9 +1235,16 @@
 	"UIC_SKIP" : 
 	[
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_Main_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/Cinematic_view_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/InclinedPlane_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/MechanicsView_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/PhysicsObject_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/Pulley_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/Rope_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/Spring_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/ThermoView_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/TopMenu_qml.cpp",
+		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/VectorArrow_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qmlcache/appPhysicsSimulationEngine_UI/WaveView_qml.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qrc_appPhysicsSimulationEngine_raw_qml_0.cpp",
 		"C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/build/Desktop_Qt_6_6_0_MSVC2019_64bit-Release/.rcc/qrc_qmake_PhysicsSimulationEngine.cpp",

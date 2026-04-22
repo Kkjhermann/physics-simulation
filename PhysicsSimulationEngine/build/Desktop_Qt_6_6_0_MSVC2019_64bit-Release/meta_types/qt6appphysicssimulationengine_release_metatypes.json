@@ -1,2 +1,407 @@
 [
+    {
+        "classes": [
+            {
+                "className": "Simulation",
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "gravity",
+                        "notify": "gravityChanged",
+                        "read": "gravity",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setGravity"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "initialSpeed",
+                        "notify": "initialSpeedChanged",
+                        "read": "initialSpeed",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setInitialSpeed"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "initialAngle",
+                        "notify": "initialAngleChanged",
+                        "read": "initialAngle",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setInitialAngle"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "mass",
+                        "notify": "massChanged",
+                        "read": "mass",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setMass"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "ratio",
+                        "notify": "ratioChanged",
+                        "read": "ratio",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setRatio"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "speedMagnitude",
+                        "notify": "speedMagnitudeChanged",
+                        "read": "speedMagnitude",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setSpeedMagnitude"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "speedAngle",
+                        "notify": "speedAngleChanged",
+                        "read": "speedAngle",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setSpeedAngle"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "name": "x",
+                        "notify": "positionChanged",
+                        "read": "x",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setX"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "name": "y",
+                        "notify": "positionChanged",
+                        "read": "y",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setY"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "name": "left_wall",
+                        "notify": "left_wallChanged",
+                        "read": "left_wall",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setLeft_wall"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 10,
+                        "name": "right_wall",
+                        "notify": "right_wallChanged",
+                        "read": "right_wall",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setRight_wall"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 11,
+                        "name": "ground",
+                        "notify": "groundChanged",
+                        "read": "ground",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setGround"
+                    }
+                ],
+                "qualifiedClassName": "Simulation",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "gravityChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "initialSpeedChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "initialAngleChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "massChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "ratioChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "speedMagnitudeChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "speedAngleChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "positionChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "left_wallChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "right_wallChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "groundChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "g",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setGravity",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "v",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setInitialSpeed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "a",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setInitialAngle",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "m",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setMass",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "r",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setRatio",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "v",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setSpeedMagnitude",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "a",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setSpeedAngle",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "x",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setX",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "y",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setY",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "left_Wall",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setLeft_wall",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "right_wall",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setRight_wall",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "ground",
+                                "type": "double"
+                            }
+                        ],
+                        "name": "setGround",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "start",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "stop",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "updatePhysics",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "simulation.h",
+        "outputRevision": 68
+    }
 ]

@@ -6,4 +6,11 @@ TopMenu 1.0 UI/TopMenu.qml
 MechanicsView 1.0 UI/MechanicsView.qml
 WaveView 1.0 UI/WaveView.qml
 ThermoView 1.0 UI/ThermoView.qml
+Cinematic_view 1.0 UI/Cinematic_view.qml
+VectorArrow 1.0 UI/VectorArrow.qml
+PhysicsObject 1.0 UI/PhysicsObject.qml
+InclinedPlane 1.0 UI/InclinedPlane.qml
+Spring 1.0 UI/Spring.qml
+Rope 1.0 UI/Rope.qml
+Pulley 1.0 UI/Pulley.qml
 

@@ -5,6 +5,13 @@
     <file alias="UI/MechanicsView.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/MechanicsView.qml</file>
     <file alias="UI/WaveView.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/WaveView.qml</file>
     <file alias="UI/ThermoView.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/ThermoView.qml</file>
+    <file alias="UI/Cinematic_view.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/Cinematic_view.qml</file>
+    <file alias="UI/VectorArrow.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/VectorArrow.qml</file>
+    <file alias="UI/PhysicsObject.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/PhysicsObject.qml</file>
+    <file alias="UI/InclinedPlane.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/InclinedPlane.qml</file>
+    <file alias="UI/Spring.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/Spring.qml</file>
+    <file alias="UI/Rope.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/Rope.qml</file>
+    <file alias="UI/Pulley.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/Pulley.qml</file>
     <file alias="ressource.qrc">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/ressource.qrc</file>
   </qresource>
 </RCC>
