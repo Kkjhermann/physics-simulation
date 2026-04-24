@@ -1,0 +1,34 @@
+{
+    "classes": [
+        {
+            "className": "SimulationMecanic",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "simulationType",
+                    "notify": "simulationTypeChanged",
+                    "read": "simulationType",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setSimulationType"
+                }
+            ],
+            "qualifiedClassName": "SimulationMecanic",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "simulationmecanic.h",
+    "outputRevision": 68
+}

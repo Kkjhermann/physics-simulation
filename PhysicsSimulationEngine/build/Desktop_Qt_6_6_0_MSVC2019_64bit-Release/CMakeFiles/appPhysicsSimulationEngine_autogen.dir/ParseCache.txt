@@ -103,3 +103,5 @@ C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/Simulation/simulation.h
  mdp:C:/Qt/6.6.0/msvc2019_64/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.6.0/msvc2019_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.6.0/msvc2019_64/include/QtCore/qxptype_traits.h
+C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/Simulation/simulationmecanic.h
+C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/Simulation/simulationmecanic.cpp

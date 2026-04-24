@@ -183,6 +183,21 @@
                     "type": "double",
                     "user": false,
                     "write": "setGround"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 12,
+                    "name": "airFriction",
+                    "notify": "airFrictionChanged",
+                    "read": "airFriction",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "double",
+                    "user": false,
+                    "write": "setAirFriction"
                 }
             ],
             "qualifiedClassName": "Simulation",
@@ -240,6 +255,11 @@
                 {
                     "access": "public",
                     "name": "groundChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "airFrictionChanged",
                     "returnType": "void"
                 }
             ],
@@ -389,6 +409,17 @@
                 {
                     "access": "public",
                     "name": "updatePhysics",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "double"
+                        }
+                    ],
+                    "name": "setAirFriction",
                     "returnType": "void"
                 }
             ],

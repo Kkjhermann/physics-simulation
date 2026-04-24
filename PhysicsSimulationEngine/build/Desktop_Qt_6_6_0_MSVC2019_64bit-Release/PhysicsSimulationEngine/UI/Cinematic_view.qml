@@ -5,323 +5,383 @@ import QtQuick.Layouts 1.15
 Rectangle {
     width: 1400
     height: 800
-    color: "#121212"
+    color: "#0f1115"
 
     RowLayout {
-        id: rowLayout
         anchors.fill: parent
-        anchors.leftMargin: 0
-        anchors.rightMargin: 0
-        anchors.topMargin: 0
-        anchors.bottomMargin: 0
+        spacing: 20
+        anchors.margins: 20
 
+        /*
+            ========================
+            LEFT CONTROL PANEL
+            ========================
+        */
         Rectangle {
             id: rect_settings
-            width: 500
-            height: 200
-            color: "#ffffff"
+            Layout.preferredWidth: 420
             Layout.fillHeight: true
+            radius: 18
+            color: "#1b1f2a"
+            border.color: "#2c3344"
+            border.width: 1
 
             ColumnLayout {
-                id: columnLayout
                 anchors.fill: parent
+                anchors.margins: 20
+                spacing: 20
 
-                Rectangle {
-                    id: settings
-                    width: 200
-                    height: 200
-                    color: "#ffffff"
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
-
-                    Text {
-                        id: text1
-                        y: 29
-                        width: 93
-                        height: 30
-                        text: qsTr("Gravity (m/s²) :")
-                        anchors.left: parent.left
-                        font.pixelSize: 20
-                    }
-
-                    Slider {
-                        id: slider
-                        x: 165
-                        y: 24
-                        width: 300
-                        stepSize: 1
-                        to: 50
-                        value: simulation.gravity
-                        onValueChanged: simulation.gravity = value
-
-                    }
-
-                    Text {
-                        id: text2
-                        y: 89
-                        width: 162
-                        height: 32
-                        text: qsTr("Initial speed (m/s) :")
-                        anchors.left: parent.left
-                        anchors.leftMargin: -3
-                        font.pixelSize: 20
-                    }
-
-                    Slider {
-                        id: slider1
-                        x: 165
-                        y: 85
-                        width: 300
-                        value: simulation.initialSpeed
-                        onValueChanged: simulation.initialSpeed = value
-                        to: 100
-                        stepSize: 1
-                    }
-
-                    Text {
-                        id: text3
-                        y: 140
-                        width: 162
-                        height: 26
-                        text: qsTr("Initial angle (°) :")
-                        anchors.left: parent.left
-                        font.pixelSize: 20
-                    }
-
-                    Slider {
-                        id: slider2
-                        x: 165
-                        y: 140
-                        width: 300
-                        value: simulation.initialAngle
-                        onValueChanged: simulation.initialAngle = value
-                        to: 180
-                        from: -180
-                        stepSize: 1
-                    }
-
-                    RowLayout {
-                        id: rowLayout1
-                        y: 270
-                        width: 500
-                        height: 100
-                        anchors.left: parent.left
-                        anchors.leftMargin: 0
-
-                        Button {
-                            id: button
-                            text: qsTr("Start")
-                            icon.color: "#262a27"
-                            highlighted: false
-                            flat: false
-                            Layout.fillWidth: true
-                            onClicked: simulation.start()
-                        }
-
-                        Button {
-                            id: button1
-                            text: qsTr("Stop")
-                            Layout.fillWidth: true
-                            onClicked: simulation.stop()
-                        }
-                    }
-
-                    Text {
-                        id: text4
-                        y: 188
-                        width: 102
-                        height: 35
-                        text: qsTr("Mass (g) :")
-                        anchors.left: parent.left
-                        font.pixelSize: 20
-                    }
-
-                    Slider {
-                        id: slider3
-                        x: 165
-                        y: 179
-                        width: 300
-                        value: simulation.mass
-                        onValueChanged: simulation.mass = value
-                        from: 100
-                        to: 1000
-                        stepSize: 100
-                    }
-
-                    Text {
-                        id: text5
-                        y: 241
-                        width: 168
-                        height: 23
-                        text: qsTr("Ratio (cm/pixel) :")
-                        anchors.left: parent.left
-                        font.pixelSize: 20
-                    }
-
-                    Slider {
-                        id: slider4
-                        x: 165
-                        y: 233
-                        width: 300
-                        value: simulation.ratio
-                        onValueChanged: simulation.ratio = value
-                        to: 1
-                        from: 0.01
-                        stepSize: 0.1
-                    }
+                Text {
+                    text: "Simulation Controls"
+                    color: "white"
+                    font.pixelSize: 28
+                    font.bold: true
                 }
 
                 Rectangle {
-                    id: todo
-                    width: 200
-                    height: 200
-                    color: "#ffffff"
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    radius: 14
+                    color: "#232938"
+
+                    ColumnLayout {
+                        anchors.fill: parent
+                        anchors.margins: 20
+                        spacing: 18
+
+                        /*
+                            Reusable slider rows
+                        */
+
+                        RowLayout {
+                            Layout.fillWidth: true
+
+                            Text {
+                                text: "Gravity"
+                                color: "white"
+                                font.pixelSize: 18
+                                Layout.preferredWidth: 100
+                            }
+
+                            Slider {
+                                Layout.fillWidth: true
+                                stepSize: 1
+                                to: 50
+                                value: simulation.gravity
+                                onValueChanged: simulation.gravity = value
+                            }
+
+                            Text {
+                                text: simulation.gravity.toFixed(2) + " m/s²"
+                                color: "#8ab4ff"
+                                font.pixelSize: 16
+                                Layout.preferredWidth: 100
+                            }
+                        }
+
+                        RowLayout {
+                            Layout.fillWidth: true
+
+                            Text {
+                                text: "Speed"
+                                color: "white"
+                                font.pixelSize: 18
+                                Layout.preferredWidth: 100
+                            }
+
+                            Slider {
+                                Layout.fillWidth: true
+                                value: simulation.initialSpeed
+                                onValueChanged: simulation.initialSpeed = value
+                                to: 100
+                                stepSize: 1
+                            }
+
+                            Text {
+                                text: simulation.initialSpeed.toFixed(2) + " m/s"
+                                color: "#8ab4ff"
+                                font.pixelSize: 16
+                                Layout.preferredWidth: 100
+                            }
+                        }
+
+                        RowLayout {
+                            Layout.fillWidth: true
+
+                            Text {
+                                text: "Angle"
+                                color: "white"
+                                font.pixelSize: 18
+                                Layout.preferredWidth: 100
+                            }
+
+                            Slider {
+                                Layout.fillWidth: true
+                                value: simulation.initialAngle
+                                onValueChanged: simulation.initialAngle = value
+                                from: -180
+                                to: 180
+                                stepSize: 1
+                            }
+
+                            Text {
+                                text: simulation.initialAngle.toFixed(2) + "°"
+                                color: "#8ab4ff"
+                                font.pixelSize: 16
+                                Layout.preferredWidth: 100
+                            }
+                        }
+
+                        RowLayout {
+                            Layout.fillWidth: true
+
+                            Text {
+                                text: "Mass"
+                                color: "white"
+                                font.pixelSize: 18
+                                Layout.preferredWidth: 100
+                            }
+
+                            Slider {
+                                Layout.fillWidth: true
+                                value: simulation.mass
+                                onValueChanged: simulation.mass = value
+                                from: 1
+                                to: 50
+                                stepSize: 1
+                            }
+
+                            Text {
+                                text: simulation.mass.toFixed(2) + " Kg"
+                                color: "#8ab4ff"
+                                font.pixelSize: 16
+                                Layout.preferredWidth: 100
+                            }
+                        }
+
+                        RowLayout {
+                            Layout.fillWidth: true
+
+                            Text {
+                                text: "Ratio"
+                                color: "white"
+                                font.pixelSize: 18
+                                Layout.preferredWidth: 100
+                            }
+
+                            Slider {
+                                Layout.fillWidth: true
+                                value: simulation.ratio
+                                onValueChanged: simulation.ratio = value
+                                from: 0.01
+                                to: 1
+                                stepSize: 0.1
+                            }
+
+                            Text {
+                                text: simulation.ratio.toFixed(2) + " cm/pixel"
+                                color: "#8ab4ff"
+                                font.pixelSize: 16
+                                Layout.preferredWidth: 100
+                            }
+                        }
+                        RowLayout {
+                            Layout.fillWidth: true
+
+                            Text {
+                                text: "Air Friction"
+                                color: "white"
+                                font.pixelSize: 18
+                                Layout.preferredWidth: 100
+                            }
+
+                            Slider {
+                                Layout.fillWidth: true
+                                from: 0
+                                to: 2
+                                stepSize: 0.01
+                                value: simulation.airFriction
+                                onValueChanged: simulation.airFriction = value
+                            }
+
+                            Text {
+                                text: simulation.airFriction.toFixed(2)
+                                color: "#8ab4ff"
+                                font.pixelSize: 16
+                                Layout.preferredWidth: 80
+                            }
+                        }
+
+                        Item {
+                            Layout.fillHeight: true
+                        }
+
+                        RowLayout {
+                            Layout.fillWidth: true
+                            spacing: 15
+
+                            Button {
+                                text: "▶ Start"
+                                Layout.fillWidth: true
+                                height: 50
+
+                                background: Rectangle {
+                                    radius: 12
+                                    color: "#1e8e3e"
+                                }
+
+                                contentItem: Text {
+                                    text: parent.text
+                                    color: "white"
+                                    font.pixelSize: 18
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+
+                                onClicked: simulation.start()
+                            }
+
+                            Button {
+                                text: "■ Stop"
+                                Layout.fillWidth: true
+                                height: 50
+
+                                background: Rectangle {
+                                    radius: 12
+                                    color: "#d93025"
+                                }
+
+                                contentItem: Text {
+                                    text: parent.text
+                                    color: "white"
+                                    font.pixelSize: 18
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+
+                                onClicked: simulation.stop()
+                            }
+                        }
+                    }
                 }
             }
         }
 
+        /*
+            ========================
+            RIGHT SIMULATION VIEW
+            ========================
+        */
         Rectangle {
             id: rect_view
-            width: 200
-            height: 200
-            color: "#121212"
-            border.width: 1
             Layout.fillWidth: true
             Layout.fillHeight: true
+            radius: 18
+            color: "#1b1f2a"
+            border.color: "#2c3344"
+            border.width: 1
 
-            GridLayout {
-                id: gridLayout
+            Item {
+                id: sceneRoot
                 anchors.fill: parent
+                anchors.margins: 20
 
-                Item {
-                    id: sceneRoot
-                    width: 200
-                    height: 200
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
+                Rectangle {
+                    id: objet
+                    x: simulation.x - width / 2
+                    y: simulation.y - height / 2
+                    width: 40
+                    height: 40
+                    radius: 20
+                    color: "#ffffff"
+                    border.color: "#5f9cff"
+                    border.width: 2
 
-                    Rectangle {
-                        id: objet
-                        x: simulation.x - width / 2
-                        y: simulation.y - height / 2
-                        width: 40
-                        height: 40
-                        opacity: 0.582
-                        color: "#eaeaea"
-                        radius: 20
-                        border.color: "#00000000"
-                        border.width: 8
-                        property real initialAngle: 0
-                        property real currentVelocity: 0
-                        property real initialVelocity: 0
-                        property real mass: 1
+                    property real initialAngle: 0
+                    property real currentVelocity: 0
+                    property real initialVelocity: 0
+                    property real mass: 1
 
-                        MouseArea {
-                            id: mouseArea
-                            x: 0
-                            y: 0
-                            anchors.fill: parent
-                            drag.target: parent
-
-                            onPositionChanged: {
-                                simulation.x = objet.x + objet.width / 2
-                                simulation.y = objet.y + objet.height / 2
-                            }
-                            enabled: !simulation.running
-                        }
-                    }
-
-                    GridLayout {
-                        id: gridLayout1
+                    MouseArea {
                         anchors.fill: parent
+                        drag.target: parent
 
-                        Rectangle {
-                            id: left_wall
-                            width: 6
-                            height: 200
-                            color: "#777777"
-                            anchors.left: parent.left
-                            Layout.fillHeight: true
-                            Binding {
-                                target: simulation
-                                property: "left_wall"
-                                value: left_wall.x + objet.width / 2
-                            }
+                        onPositionChanged: {
+                            simulation.x = objet.x + objet.width / 2
+                            simulation.y = objet.y + objet.height / 2
                         }
 
-                        Rectangle {
-                            id: right_wall
-                            width: 6
-                            height: 200
-                            color: "#777777"
-                            anchors.right: parent.right
-                            Layout.fillHeight: true
-                            Binding {
-                                target: simulation
-                                property: "right_wall"
-                                value: right_wall.x - objet.width / 2
-                            }
-                        }
+                        enabled: !simulation.running
                     }
+                }
 
-                    ColumnLayout {
-                        id: columnLayout1
-                        anchors.fill: parent
+                Rectangle {
+                    id: left_wall
+                    width: 6
+                    color: "#888"
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.bottom: ground.top
 
-                        Rectangle {
-                            id: ground
-                            width: 895
-                            height: 6
-                            color: "#ffffff"
-                            anchors.bottom: parent.bottom
-                            Layout.rowSpan: 1
-                            Layout.columnSpan: 1
-                            Layout.fillWidth: true
-                            Binding {
-                                target: simulation
-                                property: "ground"
-                                value: ground.y - objet.height / 2
-                            }
-                        }
+                    Binding {
+                        target: simulation
+                        property: "left_wall"
+                        value: left_wall.x + objet.width / 2
                     }
-                    VectorArrow {
-                        id: velocityVector
-                        x: objet.x + objet.width / 2
-                        y: objet.y + objet.height / 2 - 10
-                        arrowLength: simulation.speedMagnitude * (1 / simulation.ratio) * 0.1
-                        arrowAngle: -simulation.speedAngle
-                        arrowColor: "#0a26cc"
-                        showLabel: true
-                        labelText: "V = " + simulation.speedMagnitude.toFixed(2) + " m/s"
+                }
+
+                Rectangle {
+                    id: right_wall
+                    width: 6
+                    color: "#888"
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.bottom: ground.top
+
+                    Binding {
+                        target: simulation
+                        property: "right_wall"
+                        value: right_wall.x - objet.width / 2
                     }
-                    VectorArrow {
-                        id: gravityVector
-                        x: 50
-                        y: 50
-                        //arrowLength: simulation.gravity * 5
-                        arrowLength: 10 * 5
-                        arrowAngle: 90
-                        arrowColor: "#aa0000"
-                        showLabel: true
-                        labelText: "g = " + simulation.gravity.toFixed(2) + " m/s²"
+                }
+
+                Rectangle {
+                    id: ground
+                    height: 6
+                    color: "#ffffff"
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.bottom: parent.bottom
+
+                    Binding {
+                        target: simulation
+                        property: "ground"
+                        value: ground.y - objet.height / 2
                     }
-                    Spring {
-                        x: 300
-                        y: 500
-                        springLength: 100
-                        coils: 20
-                    }
-                    Rope {
-                        x: 30
-                        y: 50
-                        ropeLength: 100
-                    }
+                }
+
+                VectorArrow {
+                    id: velocityVector
+                    x: objet.x + objet.width / 2
+                    y: objet.y + objet.height / 2 - 10
+                    arrowLength: simulation.speedMagnitude * (1 / simulation.ratio) * 0.1
+                    arrowAngle: -simulation.speedAngle
+                    arrowColor: "#4a90ff"
+                    showLabel: true
+                    labelText: "V = " + simulation.speedMagnitude.toFixed(2) + " m/s"
+                }
+
+                VectorArrow {
+                    id: gravityVector
+                    x: 60
+                    y: 60
+                    arrowLength: 50
+                    arrowAngle: 90
+                    arrowColor: "#ff4d4d"
+                    showLabel: true
+                    labelText: "g = " + simulation.gravity.toFixed(2) + " m/s²"
                 }
             }
         }
     }
-
-
 }

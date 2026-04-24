@@ -13,4 +13,6 @@ InclinedPlane 1.0 UI/InclinedPlane.qml
 Spring 1.0 UI/Spring.qml
 Rope 1.0 UI/Rope.qml
 Pulley 1.0 UI/Pulley.qml
+PendulumTestView 1.0 UI/PendulumTestView.qml
+SpringTestView 1.0 UI/SpringTestView.qml
 

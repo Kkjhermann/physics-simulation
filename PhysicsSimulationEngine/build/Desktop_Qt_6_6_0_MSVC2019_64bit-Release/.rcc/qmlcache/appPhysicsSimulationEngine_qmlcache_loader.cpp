@@ -82,6 +82,27 @@ namespace _qt_qml_PhysicsSimulationEngine_UI_Rope_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_PhysicsSimulationEngine_UI_Pulley_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_PhysicsSimulationEngine_UI_PendulumTestView_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_PhysicsSimulationEngine_UI_SpringTestView_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -107,6 +128,9 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/InclinedPlane.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_InclinedPlane_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/Spring.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_Spring_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/Rope.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_Rope_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/Pulley.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_Pulley_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/PendulumTestView.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_PendulumTestView_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/PhysicsSimulationEngine/UI/SpringTestView.qml"), &QmlCacheGeneratedCode::_qt_qml_PhysicsSimulationEngine_UI_SpringTestView_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

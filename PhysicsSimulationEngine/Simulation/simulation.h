@@ -26,6 +26,8 @@ class Simulation : public QObject
     Q_PROPERTY(double right_wall READ right_wall WRITE setRight_wall NOTIFY right_wallChanged)
     Q_PROPERTY(double ground READ ground WRITE setGround NOTIFY groundChanged)
 
+    Q_PROPERTY(double airFriction READ airFriction WRITE setAirFriction NOTIFY airFrictionChanged)
+
 public:
     explicit Simulation(QObject *parent = nullptr);
 
@@ -44,6 +46,8 @@ public:
     double right_wall() const;
     double ground() const;
 
+    double airFriction() const;
+
 public slots:
     void setGravity(double g);
     void setInitialSpeed(double v);
@@ -61,6 +65,7 @@ public slots:
     void start();
     void stop();
     void updatePhysics();
+    void setAirFriction(double value);
 
 signals:
     void gravityChanged();
@@ -74,12 +79,13 @@ signals:
     void left_wallChanged();
     void right_wallChanged();
     void groundChanged();
+    void airFrictionChanged();
 
 private:
     double m_gravity = 10.0;
     double m_initialSpeed = 0.0;
     double m_initialAngle = -90.0;
-    double m_mass = 10.0;
+    double m_mass = 1.0;
     double m_ratio = 0.1;
 
     double m_speedMagnitude = 0.0;
@@ -99,6 +105,8 @@ private:
     double m_ground = 500;
     double m_right_wall = 500;
     double m_left_wall = 20;
+
+    double m_airFriction = 0.05;
 
     QTimer m_timer;
 };

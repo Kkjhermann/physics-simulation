@@ -51,6 +51,7 @@ static constexpr auto qt_meta_stringdata_CLASSSimulationENDCLASS = QtMocHelpers:
     "left_wallChanged",
     "right_wallChanged",
     "groundChanged",
+    "airFrictionChanged",
     "setGravity",
     "g",
     "setInitialSpeed",
@@ -76,6 +77,8 @@ static constexpr auto qt_meta_stringdata_CLASSSimulationENDCLASS = QtMocHelpers:
     "start",
     "stop",
     "updatePhysics",
+    "setAirFriction",
+    "value",
     "gravity",
     "initialSpeed",
     "initialAngle",
@@ -83,11 +86,12 @@ static constexpr auto qt_meta_stringdata_CLASSSimulationENDCLASS = QtMocHelpers:
     "ratio",
     "speedMagnitude",
     "speedAngle",
-    "left_wall"
+    "left_wall",
+    "airFriction"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSSimulationENDCLASS_t {
-    uint offsetsAndSizes[92];
+    uint offsetsAndSizes[100];
     char stringdata0[11];
     char stringdata1[15];
     char stringdata2[1];
@@ -101,39 +105,43 @@ struct qt_meta_stringdata_CLASSSimulationENDCLASS_t {
     char stringdata10[17];
     char stringdata11[18];
     char stringdata12[14];
-    char stringdata13[11];
-    char stringdata14[2];
-    char stringdata15[16];
-    char stringdata16[2];
-    char stringdata17[16];
-    char stringdata18[2];
-    char stringdata19[8];
-    char stringdata20[2];
-    char stringdata21[9];
-    char stringdata22[2];
-    char stringdata23[18];
-    char stringdata24[14];
-    char stringdata25[5];
-    char stringdata26[2];
-    char stringdata27[5];
-    char stringdata28[2];
-    char stringdata29[13];
-    char stringdata30[10];
-    char stringdata31[14];
-    char stringdata32[11];
-    char stringdata33[10];
-    char stringdata34[7];
-    char stringdata35[6];
-    char stringdata36[5];
-    char stringdata37[14];
-    char stringdata38[8];
-    char stringdata39[13];
-    char stringdata40[13];
-    char stringdata41[5];
-    char stringdata42[6];
-    char stringdata43[15];
-    char stringdata44[11];
-    char stringdata45[10];
+    char stringdata13[19];
+    char stringdata14[11];
+    char stringdata15[2];
+    char stringdata16[16];
+    char stringdata17[2];
+    char stringdata18[16];
+    char stringdata19[2];
+    char stringdata20[8];
+    char stringdata21[2];
+    char stringdata22[9];
+    char stringdata23[2];
+    char stringdata24[18];
+    char stringdata25[14];
+    char stringdata26[5];
+    char stringdata27[2];
+    char stringdata28[5];
+    char stringdata29[2];
+    char stringdata30[13];
+    char stringdata31[10];
+    char stringdata32[14];
+    char stringdata33[11];
+    char stringdata34[10];
+    char stringdata35[7];
+    char stringdata36[6];
+    char stringdata37[5];
+    char stringdata38[14];
+    char stringdata39[15];
+    char stringdata40[6];
+    char stringdata41[8];
+    char stringdata42[13];
+    char stringdata43[13];
+    char stringdata44[5];
+    char stringdata45[6];
+    char stringdata46[15];
+    char stringdata47[11];
+    char stringdata48[10];
+    char stringdata49[12];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSSimulationENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -152,39 +160,43 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSimulationENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(148, 16),  // "left_wallChanged"
         QT_MOC_LITERAL(165, 17),  // "right_wallChanged"
         QT_MOC_LITERAL(183, 13),  // "groundChanged"
-        QT_MOC_LITERAL(197, 10),  // "setGravity"
-        QT_MOC_LITERAL(208, 1),  // "g"
-        QT_MOC_LITERAL(210, 15),  // "setInitialSpeed"
-        QT_MOC_LITERAL(226, 1),  // "v"
-        QT_MOC_LITERAL(228, 15),  // "setInitialAngle"
-        QT_MOC_LITERAL(244, 1),  // "a"
-        QT_MOC_LITERAL(246, 7),  // "setMass"
-        QT_MOC_LITERAL(254, 1),  // "m"
-        QT_MOC_LITERAL(256, 8),  // "setRatio"
-        QT_MOC_LITERAL(265, 1),  // "r"
-        QT_MOC_LITERAL(267, 17),  // "setSpeedMagnitude"
-        QT_MOC_LITERAL(285, 13),  // "setSpeedAngle"
-        QT_MOC_LITERAL(299, 4),  // "setX"
-        QT_MOC_LITERAL(304, 1),  // "x"
-        QT_MOC_LITERAL(306, 4),  // "setY"
-        QT_MOC_LITERAL(311, 1),  // "y"
-        QT_MOC_LITERAL(313, 12),  // "setLeft_wall"
-        QT_MOC_LITERAL(326, 9),  // "left_Wall"
-        QT_MOC_LITERAL(336, 13),  // "setRight_wall"
-        QT_MOC_LITERAL(350, 10),  // "right_wall"
-        QT_MOC_LITERAL(361, 9),  // "setGround"
-        QT_MOC_LITERAL(371, 6),  // "ground"
-        QT_MOC_LITERAL(378, 5),  // "start"
-        QT_MOC_LITERAL(384, 4),  // "stop"
-        QT_MOC_LITERAL(389, 13),  // "updatePhysics"
-        QT_MOC_LITERAL(403, 7),  // "gravity"
-        QT_MOC_LITERAL(411, 12),  // "initialSpeed"
-        QT_MOC_LITERAL(424, 12),  // "initialAngle"
-        QT_MOC_LITERAL(437, 4),  // "mass"
-        QT_MOC_LITERAL(442, 5),  // "ratio"
-        QT_MOC_LITERAL(448, 14),  // "speedMagnitude"
-        QT_MOC_LITERAL(463, 10),  // "speedAngle"
-        QT_MOC_LITERAL(474, 9)   // "left_wall"
+        QT_MOC_LITERAL(197, 18),  // "airFrictionChanged"
+        QT_MOC_LITERAL(216, 10),  // "setGravity"
+        QT_MOC_LITERAL(227, 1),  // "g"
+        QT_MOC_LITERAL(229, 15),  // "setInitialSpeed"
+        QT_MOC_LITERAL(245, 1),  // "v"
+        QT_MOC_LITERAL(247, 15),  // "setInitialAngle"
+        QT_MOC_LITERAL(263, 1),  // "a"
+        QT_MOC_LITERAL(265, 7),  // "setMass"
+        QT_MOC_LITERAL(273, 1),  // "m"
+        QT_MOC_LITERAL(275, 8),  // "setRatio"
+        QT_MOC_LITERAL(284, 1),  // "r"
+        QT_MOC_LITERAL(286, 17),  // "setSpeedMagnitude"
+        QT_MOC_LITERAL(304, 13),  // "setSpeedAngle"
+        QT_MOC_LITERAL(318, 4),  // "setX"
+        QT_MOC_LITERAL(323, 1),  // "x"
+        QT_MOC_LITERAL(325, 4),  // "setY"
+        QT_MOC_LITERAL(330, 1),  // "y"
+        QT_MOC_LITERAL(332, 12),  // "setLeft_wall"
+        QT_MOC_LITERAL(345, 9),  // "left_Wall"
+        QT_MOC_LITERAL(355, 13),  // "setRight_wall"
+        QT_MOC_LITERAL(369, 10),  // "right_wall"
+        QT_MOC_LITERAL(380, 9),  // "setGround"
+        QT_MOC_LITERAL(390, 6),  // "ground"
+        QT_MOC_LITERAL(397, 5),  // "start"
+        QT_MOC_LITERAL(403, 4),  // "stop"
+        QT_MOC_LITERAL(408, 13),  // "updatePhysics"
+        QT_MOC_LITERAL(422, 14),  // "setAirFriction"
+        QT_MOC_LITERAL(437, 5),  // "value"
+        QT_MOC_LITERAL(443, 7),  // "gravity"
+        QT_MOC_LITERAL(451, 12),  // "initialSpeed"
+        QT_MOC_LITERAL(464, 12),  // "initialAngle"
+        QT_MOC_LITERAL(477, 4),  // "mass"
+        QT_MOC_LITERAL(482, 5),  // "ratio"
+        QT_MOC_LITERAL(488, 14),  // "speedMagnitude"
+        QT_MOC_LITERAL(503, 10),  // "speedAngle"
+        QT_MOC_LITERAL(514, 9),  // "left_wall"
+        QT_MOC_LITERAL(524, 11)   // "airFriction"
     },
     "Simulation",
     "gravityChanged",
@@ -199,6 +211,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSimulationENDCLASS_t qt_meta_st
     "left_wallChanged",
     "right_wallChanged",
     "groundChanged",
+    "airFrictionChanged",
     "setGravity",
     "g",
     "setInitialSpeed",
@@ -224,6 +237,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSimulationENDCLASS_t qt_meta_st
     "start",
     "stop",
     "updatePhysics",
+    "setAirFriction",
+    "value",
     "gravity",
     "initialSpeed",
     "initialAngle",
@@ -231,7 +246,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSimulationENDCLASS_t qt_meta_st
     "ratio",
     "speedMagnitude",
     "speedAngle",
-    "left_wall"
+    "left_wall",
+    "airFriction"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -243,42 +259,44 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSSimulationENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      26,   14, // methods
-      12,  220, // properties
+      28,   14, // methods
+      13,  236, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      11,       // signalCount
+      12,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  170,    2, 0x06,   13 /* Public */,
-       3,    0,  171,    2, 0x06,   14 /* Public */,
-       4,    0,  172,    2, 0x06,   15 /* Public */,
-       5,    0,  173,    2, 0x06,   16 /* Public */,
-       6,    0,  174,    2, 0x06,   17 /* Public */,
-       7,    0,  175,    2, 0x06,   18 /* Public */,
-       8,    0,  176,    2, 0x06,   19 /* Public */,
-       9,    0,  177,    2, 0x06,   20 /* Public */,
-      10,    0,  178,    2, 0x06,   21 /* Public */,
-      11,    0,  179,    2, 0x06,   22 /* Public */,
-      12,    0,  180,    2, 0x06,   23 /* Public */,
+       1,    0,  182,    2, 0x06,   14 /* Public */,
+       3,    0,  183,    2, 0x06,   15 /* Public */,
+       4,    0,  184,    2, 0x06,   16 /* Public */,
+       5,    0,  185,    2, 0x06,   17 /* Public */,
+       6,    0,  186,    2, 0x06,   18 /* Public */,
+       7,    0,  187,    2, 0x06,   19 /* Public */,
+       8,    0,  188,    2, 0x06,   20 /* Public */,
+       9,    0,  189,    2, 0x06,   21 /* Public */,
+      10,    0,  190,    2, 0x06,   22 /* Public */,
+      11,    0,  191,    2, 0x06,   23 /* Public */,
+      12,    0,  192,    2, 0x06,   24 /* Public */,
+      13,    0,  193,    2, 0x06,   25 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      13,    1,  181,    2, 0x0a,   24 /* Public */,
-      15,    1,  184,    2, 0x0a,   26 /* Public */,
-      17,    1,  187,    2, 0x0a,   28 /* Public */,
-      19,    1,  190,    2, 0x0a,   30 /* Public */,
-      21,    1,  193,    2, 0x0a,   32 /* Public */,
-      23,    1,  196,    2, 0x0a,   34 /* Public */,
-      24,    1,  199,    2, 0x0a,   36 /* Public */,
-      25,    1,  202,    2, 0x0a,   38 /* Public */,
-      27,    1,  205,    2, 0x0a,   40 /* Public */,
-      29,    1,  208,    2, 0x0a,   42 /* Public */,
-      31,    1,  211,    2, 0x0a,   44 /* Public */,
-      33,    1,  214,    2, 0x0a,   46 /* Public */,
-      35,    0,  217,    2, 0x0a,   48 /* Public */,
-      36,    0,  218,    2, 0x0a,   49 /* Public */,
-      37,    0,  219,    2, 0x0a,   50 /* Public */,
+      14,    1,  194,    2, 0x0a,   26 /* Public */,
+      16,    1,  197,    2, 0x0a,   28 /* Public */,
+      18,    1,  200,    2, 0x0a,   30 /* Public */,
+      20,    1,  203,    2, 0x0a,   32 /* Public */,
+      22,    1,  206,    2, 0x0a,   34 /* Public */,
+      24,    1,  209,    2, 0x0a,   36 /* Public */,
+      25,    1,  212,    2, 0x0a,   38 /* Public */,
+      26,    1,  215,    2, 0x0a,   40 /* Public */,
+      28,    1,  218,    2, 0x0a,   42 /* Public */,
+      30,    1,  221,    2, 0x0a,   44 /* Public */,
+      32,    1,  224,    2, 0x0a,   46 /* Public */,
+      34,    1,  227,    2, 0x0a,   48 /* Public */,
+      36,    0,  230,    2, 0x0a,   50 /* Public */,
+      37,    0,  231,    2, 0x0a,   51 /* Public */,
+      38,    0,  232,    2, 0x0a,   52 /* Public */,
+      39,    1,  233,    2, 0x0a,   53 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -292,37 +310,40 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSSimulationENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Double,   14,
-    QMetaType::Void, QMetaType::Double,   16,
-    QMetaType::Void, QMetaType::Double,   18,
-    QMetaType::Void, QMetaType::Double,   20,
-    QMetaType::Void, QMetaType::Double,   22,
-    QMetaType::Void, QMetaType::Double,   16,
-    QMetaType::Void, QMetaType::Double,   18,
-    QMetaType::Void, QMetaType::Double,   26,
-    QMetaType::Void, QMetaType::Double,   28,
-    QMetaType::Void, QMetaType::Double,   30,
-    QMetaType::Void, QMetaType::Double,   32,
-    QMetaType::Void, QMetaType::Double,   34,
+    QMetaType::Void, QMetaType::Double,   15,
+    QMetaType::Void, QMetaType::Double,   17,
+    QMetaType::Void, QMetaType::Double,   19,
+    QMetaType::Void, QMetaType::Double,   21,
+    QMetaType::Void, QMetaType::Double,   23,
+    QMetaType::Void, QMetaType::Double,   17,
+    QMetaType::Void, QMetaType::Double,   19,
+    QMetaType::Void, QMetaType::Double,   27,
+    QMetaType::Void, QMetaType::Double,   29,
+    QMetaType::Void, QMetaType::Double,   31,
+    QMetaType::Void, QMetaType::Double,   33,
+    QMetaType::Void, QMetaType::Double,   35,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Double,   40,
 
  // properties: name, type, flags
-      38, QMetaType::Double, 0x00015103, uint(0), 0,
-      39, QMetaType::Double, 0x00015103, uint(1), 0,
-      40, QMetaType::Double, 0x00015103, uint(2), 0,
-      41, QMetaType::Double, 0x00015103, uint(3), 0,
-      42, QMetaType::Double, 0x00015103, uint(4), 0,
-      43, QMetaType::Double, 0x00015103, uint(5), 0,
-      44, QMetaType::Double, 0x00015103, uint(6), 0,
-      26, QMetaType::Double, 0x00015103, uint(7), 0,
-      28, QMetaType::Double, 0x00015103, uint(7), 0,
-      45, QMetaType::Double, 0x00015103, uint(8), 0,
-      32, QMetaType::Double, 0x00015103, uint(9), 0,
-      34, QMetaType::Double, 0x00015103, uint(10), 0,
+      41, QMetaType::Double, 0x00015103, uint(0), 0,
+      42, QMetaType::Double, 0x00015103, uint(1), 0,
+      43, QMetaType::Double, 0x00015103, uint(2), 0,
+      44, QMetaType::Double, 0x00015103, uint(3), 0,
+      45, QMetaType::Double, 0x00015103, uint(4), 0,
+      46, QMetaType::Double, 0x00015103, uint(5), 0,
+      47, QMetaType::Double, 0x00015103, uint(6), 0,
+      27, QMetaType::Double, 0x00015103, uint(7), 0,
+      29, QMetaType::Double, 0x00015103, uint(7), 0,
+      48, QMetaType::Double, 0x00015103, uint(8), 0,
+      33, QMetaType::Double, 0x00015103, uint(9), 0,
+      35, QMetaType::Double, 0x00015103, uint(10), 0,
+      49, QMetaType::Double, 0x00015103, uint(11), 0,
 
        0        // eod
 };
@@ -358,6 +379,8 @@ Q_CONSTINIT const QMetaObject Simulation::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<double, std::true_type>,
         // property 'ground'
         QtPrivate::TypeAndForceComplete<double, std::true_type>,
+        // property 'airFriction'
+        QtPrivate::TypeAndForceComplete<double, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Simulation, std::true_type>,
         // method 'gravityChanged'
@@ -381,6 +404,8 @@ Q_CONSTINIT const QMetaObject Simulation::staticMetaObject = { {
         // method 'right_wallChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'groundChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'airFrictionChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'setGravity'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -423,7 +448,10 @@ Q_CONSTINIT const QMetaObject Simulation::staticMetaObject = { {
         // method 'stop'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'updatePhysics'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'setAirFriction'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>
     >,
     nullptr
 } };
@@ -445,21 +473,23 @@ void Simulation::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 8: _t->left_wallChanged(); break;
         case 9: _t->right_wallChanged(); break;
         case 10: _t->groundChanged(); break;
-        case 11: _t->setGravity((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 12: _t->setInitialSpeed((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 13: _t->setInitialAngle((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 14: _t->setMass((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 15: _t->setRatio((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 16: _t->setSpeedMagnitude((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 17: _t->setSpeedAngle((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 18: _t->setX((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 19: _t->setY((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 20: _t->setLeft_wall((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 21: _t->setRight_wall((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 22: _t->setGround((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 23: _t->start(); break;
-        case 24: _t->stop(); break;
-        case 25: _t->updatePhysics(); break;
+        case 11: _t->airFrictionChanged(); break;
+        case 12: _t->setGravity((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 13: _t->setInitialSpeed((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 14: _t->setInitialAngle((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 15: _t->setMass((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 16: _t->setRatio((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 17: _t->setSpeedMagnitude((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 18: _t->setSpeedAngle((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 19: _t->setX((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 20: _t->setY((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 21: _t->setLeft_wall((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 22: _t->setRight_wall((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 23: _t->setGround((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 24: _t->start(); break;
+        case 25: _t->stop(); break;
+        case 26: _t->updatePhysics(); break;
+        case 27: _t->setAirFriction((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -541,6 +571,13 @@ void Simulation::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
                 return;
             }
         }
+        {
+            using _t = void (Simulation::*)();
+            if (_t _q_method = &Simulation::airFrictionChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 11;
+                return;
+            }
+        }
     } else if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<Simulation *>(_o);
         (void)_t;
@@ -558,6 +595,7 @@ void Simulation::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 9: *reinterpret_cast< double*>(_v) = _t->left_wall(); break;
         case 10: *reinterpret_cast< double*>(_v) = _t->right_wall(); break;
         case 11: *reinterpret_cast< double*>(_v) = _t->ground(); break;
+        case 12: *reinterpret_cast< double*>(_v) = _t->airFriction(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -577,6 +615,7 @@ void Simulation::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 9: _t->setLeft_wall(*reinterpret_cast< double*>(_v)); break;
         case 10: _t->setRight_wall(*reinterpret_cast< double*>(_v)); break;
         case 11: _t->setGround(*reinterpret_cast< double*>(_v)); break;
+        case 12: _t->setAirFriction(*reinterpret_cast< double*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -603,18 +642,18 @@ int Simulation::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 26)
+        if (_id < 28)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 26;
+        _id -= 28;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 26)
+        if (_id < 28)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 26;
+        _id -= 28;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 13;
     }
     return _id;
 }
@@ -683,5 +722,11 @@ void Simulation::right_wallChanged()
 void Simulation::groundChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 10, nullptr);
+}
+
+// SIGNAL 11
+void Simulation::airFrictionChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 11, nullptr);
 }
 QT_WARNING_POP

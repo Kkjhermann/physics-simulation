@@ -12,6 +12,8 @@
     <file alias="UI/Spring.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/Spring.qml</file>
     <file alias="UI/Rope.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/Rope.qml</file>
     <file alias="UI/Pulley.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/Pulley.qml</file>
+    <file alias="UI/PendulumTestView.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/PendulumTestView.qml</file>
+    <file alias="UI/SpringTestView.qml">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/UI/SpringTestView.qml</file>
     <file alias="ressource.qrc">C:/DEV_perso/physics-simulation/PhysicsSimulationEngine/ressource.qrc</file>
   </qresource>
 </RCC>

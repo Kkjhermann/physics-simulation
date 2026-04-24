@@ -10,3 +10,5 @@
 /qt/qml/PhysicsSimulationEngine/UI/Spring.qml
 /qt/qml/PhysicsSimulationEngine/UI/Rope.qml
 /qt/qml/PhysicsSimulationEngine/UI/Pulley.qml
+/qt/qml/PhysicsSimulationEngine/UI/PendulumTestView.qml
+/qt/qml/PhysicsSimulationEngine/UI/SpringTestView.qml

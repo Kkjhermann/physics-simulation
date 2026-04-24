@@ -25,7 +25,16 @@ double Simulation::y() const { return m_y; }
 double Simulation::right_wall() const { return m_right_wall; }
 double Simulation::left_wall() const { return m_left_wall; }
 double Simulation::ground() const { return m_ground; }
+double Simulation::airFriction() const{return m_airFriction;}
 
+void Simulation::setAirFriction(double value)
+{
+    if (m_airFriction == value)
+        return;
+
+    m_airFriction = value;
+    emit airFrictionChanged();
+}
 void Simulation::setGround(double ground){
     if (m_ground == ground) return;
     m_ground = ground;
@@ -138,62 +147,93 @@ void Simulation::stop()
     m_timer.stop();
     m_running = false;
 
-    m_vx = 0.0;
-    m_vy = 0.0;
-    m_speedMagnitude = 0.0;
+    // m_vx = 0.0;
+    // m_vy = 0.0;
+    // m_speedMagnitude = 0.0;
 
-    emit speedMagnitudeChanged();
-    emit speedAngleChanged();
+    // emit speedMagnitudeChanged();
+    // emit speedAngleChanged();
 }
 
 void Simulation::updatePhysics()
 {
     if (!m_running)
         return;
-    double k = 0.005;
-    double bounceFactor = m_restitution * std::exp(-k * (m_mass - 100));
 
+    double bounceFactor = m_restitution / m_mass;
     const double dt = 0.016;
 
-    const double sceneWidth = 900.0;
-    //const double m_ground = 760.0;
+    /*
+        ==========================
+        GRAVITY
+        ==========================
+    */
+    double ax = 0.0;
+    double ay = m_gravity;
 
-    // gravité
-    m_vy += m_gravity * dt;
+    /*
+        ==========================
+        AIR FRICTION
+        ==========================
+    */
+    ax += -(m_airFriction / m_mass) * m_vx;
+    ay += -(m_airFriction / m_mass) * m_vy;
 
-    // déplacement
+    /*
+        ==========================
+        UPDATE VELOCITY
+        ==========================
+    */
+    m_vx += ax * dt;
+    m_vy += ay * dt;
+
+    /*
+        ==========================
+        UPDATE POSITION
+        ==========================
+    */
     m_x += m_vx * dt * 50.0;
     m_y += m_vy * dt * 50.0;
 
-    // collision sol
-    if (m_y  >= m_ground)
+    /*
+        ==========================
+        GROUND COLLISION
+        ==========================
+    */
+    if (m_y >= m_ground)
     {
-        m_y = m_ground ;
+        m_y = m_ground;
         m_vy *= -bounceFactor;
 
-        // amortissement horizontal
+        // friction on ground
         m_vx *= 0.98;
 
-        // arrêt automatique
         if (std::abs(m_vy) < 0.2)
             m_vy = 0.0;
     }
 
-    // mur gauche
+    /*
+        ==========================
+        WALL COLLISIONS
+        ==========================
+    */
     if (m_x <= m_left_wall)
     {
         m_x = m_left_wall;
         m_vx *= -bounceFactor;
     }
 
-    // mur droit
     if (m_x >= m_right_wall)
     {
         m_x = m_right_wall;
         m_vx *= -bounceFactor;
     }
 
-    // mise à jour vecteur vitesse
+    /*
+        ==========================
+        UPDATE DISPLAY VALUES
+        ==========================
+    */
     m_speedMagnitude = std::sqrt(m_vx * m_vx + m_vy * m_vy);
 
     if (m_speedMagnitude > 0.001)
